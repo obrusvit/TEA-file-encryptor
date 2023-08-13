@@ -78,18 +78,18 @@ int main(int argc, char** argv) {
     try {
         const auto args = get_program_args(argc, argv);
 
+        std::ifstream ifs{args.source_file};
+        std::ofstream ofs{args.target_file};
+        if (!ifs || !ofs) {
+            throw std::runtime_error{"bad filename"};
+        }
+
         SetStdinEcho(false);
         std::string key;
         std::cout << "enter key: ";
         std::cin >> key;
         std::cout << "\n";
         SetStdinEcho(true);
-
-        std::ifstream ifs{args.source_file};
-        std::ofstream ofs{args.target_file};
-        if (!ifs || !ofs) {
-            throw std::runtime_error{"bad filename"};
-        }
 
         // proceed with the main action
         switch (args.action) {
