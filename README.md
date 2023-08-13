@@ -5,7 +5,7 @@
 This program encrypts or decrypts a file with [TEA (Tiny Encryption Algorithm)](https://en.wikipedia.org/wiki/Tiny_Encryption_Algorithm) with a user defined key entered upon prompt.
 It allows hiding sensitive text files on your PC or flashdrive.
 The algorithm implementation is taken from a book: *Programming: Principles and Practice Using C++, Second Edition* by Bjarne Stroustup.
-I modified it a little bit and added a
+This repo adds a command line interface (CLI) to facilitate inteded usage.
 
 ## Example usage.
 To encrypt a file:
